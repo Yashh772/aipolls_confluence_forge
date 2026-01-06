@@ -1,0 +1,20 @@
+modules:
+  macro:
+    - key: aipoll-confluence-hello-world-macro
+      resource: main
+      render: native
+      resolver:
+        function: resolver
+      title: aipoll-confluence
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs24.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/906c3c54-ba4b-467e-8bac-0c6d6c91fdef
